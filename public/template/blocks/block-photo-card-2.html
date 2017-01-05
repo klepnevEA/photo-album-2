@@ -1,0 +1,30 @@
+<div class="block_photo-card__wrapper">
+    <div class="photo-card__img" ng-click="photoCard2.showPhoto()">
+        <img ng-src="{{photo.thumbnail_url}}" class="photo-card__img-image">
+        <div class="album-card-link__hover">
+            <svg class="photo-card__loupe">
+                <use xlink:href="img/sprite.svg#loupe"></use>
+            </svg>
+        </div>
+        <div class="photo-card-2__comments">
+            <svg class="photo-card__icon photo-card__icon_1">
+                <use xlink:href="img/sprite.svg#comments"></use>
+            </svg>
+            <div class="photo-card__stats" ng-bind="photo.commentsCount"></div>
+            <svg class="photo-card__icon photo-card__icon_1">
+                <use xlink:href="img/sprite.svg#like"></use>
+            </svg>
+            <div class="photo-card__stats" ng-bind="photo.likesCount"></div>
+
+        </div>
+    </div>
+    <div class="album-card__description">
+        <a class="album-card__edit-link" ng-click="photoCard2.editPopup()" ng-if="user.id == currentUser.id">
+            <svg class="album-card__btn-edit">
+                <use xlink:href="img/sprite.svg#edit"></use>
+            </svg>
+        </a>
+        <div class="album-card__title" ng-bind="photo.name || 'Фото без имени'"></div>
+    </div>
+</div>
+

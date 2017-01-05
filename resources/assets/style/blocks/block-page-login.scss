@@ -1,0 +1,207 @@
+body, html {
+  width: 100%;
+
+  height: 100%;
+}
+
+.page-login {
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+  min-height: 500px;
+}
+
+.page-login__wrapper-parallax {
+  position: absolute;
+  z-index: -1;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  .wrapper-wparallax__layer {
+    position: absolute;
+    top: -230px;
+    left: -40px;
+
+    width: 106%;
+
+    @include rem(min-width, 1850px);
+    @include breakpoint(max-width 1850px) {
+      top: -160px;
+    }
+    @include breakpoint(max-width 1750px) {
+      top: -130px;
+
+      @include rem(min-width, 1750px);
+    }
+    @include breakpoint(max-width 1680px) {
+      top: -95px;
+
+      @include rem(min-width, 1750px);
+    }
+    @include breakpoint(max-width 1400px) {
+      top: -95px;
+
+      @include rem(min-width, 1550px);
+    }
+    @include breakpoint(max-width 1200px) {
+      top: -35px;
+
+      @include rem(min-width, 1350px);
+    }
+    @include breakpoint(max-width 1000px) {
+      top: -5px;
+
+      @include rem(min-width, 1200px);
+    }
+    @include breakpoint(max-width 768px) {
+      display: none;
+    }
+  }
+  .wrapper-wparallax__layer768 {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+
+    width: 100%;
+
+    @include breakpoint(max-width 768px) {
+      left: 50%;
+
+      transform: translateX(-50%);
+    }
+    @include breakpoint(max-width 763px) {
+      top: -140px;
+    }
+    @include breakpoint(max-width 640px) {
+      top: -80px;
+
+      min-width: 600px;
+    }
+    @include breakpoint(max-width 500px) {
+      top: -80px;
+
+      min-width: 550px;
+    }
+    @include breakpoint(max-width 414px) {
+      top: 0;
+
+      min-width: 552px;
+    }
+    @include breakpoint(max-width 400px) {
+      top: 0;
+
+      min-width: 500px;
+    }
+    @include breakpoint(max-width 360px) {
+      top: 0;
+
+      min-width: 480px;
+    }
+  }
+}
+
+.page-login__wrapper-blocks {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+//настройки положения блока вторизациии
+.block_auth {
+  margin-top: 40px;
+
+  @include breakpoint($screen3) {
+    margin-top: 20px;
+  }
+  @include breakpoint($screen4) {
+    margin-top: 10px;
+  }
+}
+
+//настройки футера
+.login_footer {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-top: auto;
+  padding-bottom: 20px;
+
+  background: url('../img/Rectangle13.png');
+  background-size: cover;
+
+  justify-content: flex-end;
+  align-items: center;
+  @include breakpoint($screen4) {
+    padding-bottom: 10px;
+  }
+
+  .login_footer__text {
+    width: 96%;
+
+    text-align: center;
+
+    opacity: 0.8;
+    color: #FFFFFF;
+
+    font-family: $font1;
+    font-weight: 300;
+  }
+}
+
+//настройки heading
+.login_heading {
+  width: 95%;
+  margin-top: auto;
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  color: #FFFFFF;
+
+  font-family: $font2;
+  font-weight: 700;
+
+  @include rem(font-size, 42px);
+  @include breakpoint(max-width 410px) {
+    @include rem(font-size, 30px);
+  }
+}
+
+// Настройки subheading
+.login_subheading {
+  width: 45%;
+
+  text-align: center;
+
+  color: #FFFFFF;
+
+  font-family: $font1;
+  font-weight: 300;
+
+  @include rem(font-size, 16px);
+  @include breakpoint(max-width 1000px) {
+    width: 60%;
+  }
+  @include breakpoint(max-width 620px) {
+    width: 95%;
+  }
+  @include breakpoint(max-width 410px) {
+    @include rem(font-size, 14px);
+  }
+
+}

@@ -1,0 +1,456 @@
+.wrapper_popup_big {
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+  padding: 60px 0;
+
+  justify-content: center;
+  align-items: flex-end;
+  @include breakpoint(max-width 450px) {
+    padding-top: 0;
+  }
+}
+
+.photo-slider__close {
+  position: fixed;
+  z-index: 50;
+  top: 40px;
+  right: 40px;
+
+  user-select: none;
+
+  opacity: .65;
+
+  fill: #fff;
+  @include rem(width, 26px);
+  @include rem(height, 26px);
+  @include breakpoint($screen3) {
+    top: 20px;
+    right: 20px;
+  }
+  @include breakpoint(max-width 420px) {
+    @include rem(width, 26px * .75);
+    @include rem(height, 26px * .75);
+  }
+}
+
+.photo-slider__close:hover {
+  opacity: 1;
+}
+
+.photo-slider__link {
+  position: fixed;
+  top: 0;
+
+  display: block;
+
+  width: 40%;
+  height: 100%;
+  &:hover {
+    .photo-slider__arrow {
+      opacity: 1;
+    }
+  }
+  &_left {
+    left: 0;
+  }
+  &_right {
+    right: 0;
+  }
+}
+
+.photo-slider__arrow {
+  position: fixed;
+  z-index: 50;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  opacity: .65;
+
+  fill: #fff;
+  @include rem(margin-top, -26px / 2);
+  @include rem(width, 16px);
+  @include rem(height, 26px);
+  @include breakpoint(max-width 420px) {
+    @include rem(width, 16px * .75);
+    @include rem(height, 26px * .75);
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.photo-slider__arrow_left {
+  left: 40px;
+
+  @include breakpoint($screen3) {
+    left: 20px;
+  }
+  @include breakpoint(max-width 420px) {
+    left: 10px;
+  }
+}
+
+.photo-slider__arrow_right {
+  right: 40px;
+
+  @include breakpoint($screen3) {
+    right: 20px;
+  }
+  @include breakpoint(max-width 420px) {
+    right: 10px;
+  }
+}
+
+.popup-big {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  @include rem(width, 665px);
+  @include breakpoint($screen2) {
+    @include rem(width, 600px);
+  }
+  @include breakpoint($screen3) {
+    @include rem(width, 500px);
+  }
+  @include breakpoint($screen2) {
+    @include rem(width, 400px);
+  }
+  @include breakpoint(max-width 500px) {
+    @include rem(width, 320px);
+  }
+  @include breakpoint(max-width 420px) {
+    @include rem(width, 240px);
+  }
+
+  //настройки фото слайдера
+  .popup-big__photo-slider {
+    position: relative;
+
+    width: 100%;
+
+    user-select: none;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    @include rem(height, 300px);
+
+    .photo-slider_wrapper {
+      position: relative;
+
+      overflow: hidden;
+
+      width: 100%;
+      height: 100%;
+
+      .photo-slider__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+        &_prev {
+          left: -100%;
+        }
+        &_next {
+          left: 100%;
+        }
+      }
+    }
+
+  }
+  .popup-big__hashtag {
+    text-decoration: none;
+
+    color: #53c9f3;
+
+    font-weight: 700;
+  }
+  .popup-big__hashtag:visited {
+    text-decoration: none;
+
+    color: #53c9f3;
+  }
+  .popup-big__hashtag:hover {
+    text-decoration: none;
+
+    color: #11b4ef;
+  }
+
+  //конец настройки фото слайдера
+  //настройки описания фото
+  .discription {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 20px;
+    padding-top: 20px;
+
+    background: #ffffff;
+
+    @include breakpoint($screen4) {
+      padding: 5px 0 0 10px;
+    }
+    .discription__title {
+      display: flex;
+
+      margin-bottom: 8px;
+
+      align-items: center;
+
+      .avtor_name {
+        @include breakpoint($screen4) {
+          overflow: hidden;
+
+          @include rem(width, 100px);
+        }
+      }
+      .button__like_right {
+        margin-left: auto;
+      }
+
+      .title__content_avtor-avatar {
+        overflow: hidden;
+
+        cursor: pointer;
+
+        border-radius: 25px;
+
+        @include rem(width, 50px);
+        @include rem(height, 50px);
+
+        .avtor-avatar_image {
+          width: 100%;
+          height: 100%;
+
+          user-select: none;
+        }
+      }
+      .title__content__avtor-name {
+        margin-left: 20px;
+
+        cursor: pointer;
+
+        font-family: $font2;
+        font-size: 16px;
+        font-weight: 700;
+
+        @include breakpoint(max-width 400px) {
+          margin-left: 10px;
+        }
+      }
+
+    }
+    .discription__text {
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: 40px;
+
+      align-items: flex-start;
+      .discription__text__name-for-photo {
+        margin-bottom: 15px;
+
+        font-size: 21px;
+        font-weight: 700;
+        font-style: $font1;
+      }
+      .discription__text__story-about-photo {
+        font-size: 16px;
+        font-weight: 300;
+        font-style: $font1;
+        line-height: 23px;
+      }
+    }
+  }
+  //конец настройки описания фото
+  //настройки комментариев фото
+  .popup-big__comment-content {
+    display: flex;
+    flex-direction: column;
+
+    background: #f6f6f6;
+
+    align-content: flex-start;
+    &.active {
+      .comments-title__arrow {
+        transform: rotate3d(0, 0, 1, 180deg) !important;
+      }
+
+      .popup-big__comment-wrapper {
+        height: auto;
+      }
+    }
+
+    .popup-big__comment-wrapper {
+      overflow: hidden;
+
+      height: 0;
+    }
+
+    .comments {
+      @include breakpoint($screen4) {
+        margin: 0 10px 20px 10px;
+      }
+    }
+    .comment-content__title {
+      margin: 1.2em 1.5em;
+
+      @include breakpoint($screen4) {
+        margin-top: 18px;
+        margin-left: 10px;
+      }
+      .title__comments-title {
+
+        .comments-title__text {
+          display: inline-block;
+
+          cursor: pointer;
+
+          font-size: 16px;
+          font-weight: 700;
+          font-style: $font1;
+        }
+        .comments-title__link {
+          display: inline-block;
+
+          text-decoration: none;
+        }
+        .comments-title__arrow {
+          transition: transform .25s;
+          transform: rotate3d(0, 0, 1, 0deg);
+
+          fill: #a0a09f;
+          @include rem(width, 20px);
+          @include rem(height, 10px);
+          &:hover {
+            cursor: pointer;
+
+            fill: #737371;
+          }
+        }
+      }
+
+    }
+
+    .comment-content__comments {
+      display: flex;
+
+      margin-bottom: 20px;
+      padding: 15px 20px 0 0;
+
+      border-top: 1px solid #e1e1e1;
+
+      @include breakpoint($screen4) {
+        padding: 11px 10px 0 10px;
+      }
+      .comments__wrapperd-avatar {
+        display: flex;
+
+        width: 30%;
+        max-width: 130px;
+
+        justify-content: flex-end;
+      }
+
+      .comments_avtor-avatar {
+        overflow: hidden;
+
+        border-radius: 25px;
+
+        @include rem(width, 50px);
+        @include rem(height, 50px);
+        .avtor-avatar_photo {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .comments_avtor-avatar_none {
+        @include breakpoint(max-width 420px) {
+          display: none;
+        }
+      }
+
+      .comments__commenter-content {
+        display: flex;
+        flex-direction: column;
+
+        width: 70%;
+        margin-left: 20px;
+
+        flex: 1 0 auto;
+        @include breakpoint($screen4) {
+          margin-left: 0;
+        }
+
+        .button__showMore_botMerg {
+          margin: 0;
+        }
+
+        .comenter_name {
+          margin-bottom: 15px;
+
+          font-size: 16px;
+          font-weight: 700;
+          font-style: $font2;
+
+          @include breakpoint($screen4) {
+            margin-bottom: 8px;
+          }
+        }
+        .commenter-content__add-comment {
+          height: 1.22em;
+          margin-bottom: 10px;
+          padding: 1em;
+
+          resize: none;
+          transition: height .25s;
+
+          border: 1px solid #d8d6d6;
+          border-radius: 20px;
+
+          font-family: $font1;
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 1.22;
+          &:hover, &:focus {
+            border: 1px solid #20b6ed;
+          }
+          &:focus {
+            height: 6em;
+          }
+          &.ng-not-empty {
+            height: 6em;
+          }
+        }
+
+        .commenter-content__comment-one {
+          font-size: 16px;
+          font-weight: 300;
+          font-style: $font1;
+          line-height: 23px;
+
+          @include rem(width, 81%);
+          @include breakpoint($screen4) {
+            width: 93%;
+          }
+        }
+
+      }
+    }
+
+    .comment-content__comments_BT-none {
+      border-top: none;
+    }
+
+  }
+  //конец настройки комментариев
+}

@@ -1,0 +1,38 @@
+.header__profile_user {
+  display: flex;
+
+  min-height: 240px;
+
+  align-items: center;
+  @include breakpoint ($screen3) {
+    flex-flow: column nowrap;
+	  
+    width: 100%;
+  }
+}
+.header__btn_user {
+  width: 10px;
+  
+  flex: 1 0 auto;
+  @include breakpoint ($screen3) {
+	  position:absolute;
+  	right:0;
+  	top:0;
+  }
+}
+.header__bar_user-wrapper {
+  width: 100%;
+  height: 60px;
+}
+
+.header__bar_fixed {
+  position: absolute;
+
+  top:0;
+  left:0;
+
+  width: 100%;
+  height:60px;
+
+  display:none;
+}

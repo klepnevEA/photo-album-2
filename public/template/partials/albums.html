@@ -1,0 +1,20 @@
+<div class="album-list">
+    <div class="album-list__button">
+        <button class="button button__add">
+            <svg class="button__add-svg">
+                <use xlink:href="img/sprite.svg#add"></use>
+            </svg>
+            <div class="button__add-text">Добавить</div>
+        </button>
+    </div>
+    <div class="container">
+        <div class="album-list__title">Мои альбомы</div>
+
+        <div class="grid grid_var2">
+            <div class="grid__item" ng-class="">
+                @include('blocks.block-album-card')
+            </div>
+        </div>
+    </div>
+</div>
+</div>

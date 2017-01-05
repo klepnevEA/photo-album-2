@@ -1,0 +1,13 @@
+/*-----------------------------------------------------------------------------
+    Fonts
+-----------------------------------------------------------------------------*/
+// Panton
+@include font-face(Panton, '../fonts/pathon-bold', 700, normal, eot otf svg ttf woff woff2);
+
+// ProximaNova
+@include font-face(ProximaNova, '../fonts/proximanova-light', 300, normal, eot otf svg ttf woff woff2);
+@include font-face(ProximaNova, '../fonts/proximanova-light-italic', 300, italic, eot otf svg ttf woff woff2);
+@include font-face(ProximaNova, '../fonts/proximanova-semibold', 600, normal, eot otf svg ttf woff woff2);
+/*-----------------------------------------------------------------------------
+    /Fonts
+-----------------------------------------------------------------------------*/

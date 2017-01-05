@@ -1,0 +1,32 @@
+.demonstration {
+  background-color: $demonstration-color-1;
+
+  &__section {
+    width: 90%;
+    margin: 0 auto;
+
+    padding: 4rem 0;
+
+    border-bottom: 0.2rem dashed $demonstration-color-2;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__heading {
+    display: block;
+
+    margin-bottom: 1em;
+
+    color: $demonstration-color-2;
+
+    font-family: $font2;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
+
+.popup {
+  display: none;
+}

@@ -1,0 +1,19 @@
+<div class="block_popup-photo-delete white-popup" id="delete-photo">
+    <div class="block__popup-header">
+        <div class="add-album__text" ng-bind="popup.title"></div>
+        <button class="add-album__close popup-close" ng-click="popupDelete.cancel()">
+            <svg class="add-album__icon-close">
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="block__photo-delete">
+        <div class="photo-delete__title" ng-bind="popup.text">Вы хотите удалить это фото?</div>
+        <div class="photo-delete__menu">
+            <a class="link__yes" ng-click="delete()">Да</a>
+            <a class="link__cansel" ng-click="popupDelete.cancel()">Отменить</a>
+        </div>
+    </div>
+    <div class="block__popup-save">
+    </div>
+</div>

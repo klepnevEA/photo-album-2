@@ -1,0 +1,67 @@
+// Mixins
+@import 'mixins/font-face';
+@import 'mixins/rem';
+@import 'mixins/clearfix';
+@import 'mixins/breakpoint';
+
+// Starting
+@import 'starting/vars';
+@import 'starting/fonts';
+@import 'starting/base';
+
+// Common
+@import 'common/temp';
+@import 'common/loader';
+
+// Buttons
+@import 'blocks/block-buttons';
+
+// Profile
+@import 'blocks/block-header-profile-small-1';
+@import 'blocks/block-header-profile-small';
+
+// Header
+@import 'blocks/block-header';
+@import 'blocks/block-header-user';
+@import 'blocks/block-header-album';
+@import 'blocks/block-header-search';
+@import 'blocks/block-header-edit';
+@import 'blocks/block-header-fixed';
+@import 'blocks/block-header-fixed-search';
+@import 'blocks/block-header-fixed-main';
+
+//Block_authorization
+@import 'blocks/block-login';
+@import 'blocks/block-page-login';
+
+// Cards
+@import 'blocks/block-cards';
+
+// Popup
+@import 'blocks/block-popup-notification';
+@import 'blocks/block-social-popup';
+@import 'blocks/block-popup-album';
+@import 'blocks/block-popup-photo-add';
+@import 'blocks/block-popup-photo-delete';
+@import 'blocks/block-popup-photo-edit';
+@import 'blocks/block-popup-profile-edit';
+@import 'blocks/block-popup-big';
+
+//magnific-popup
+
+@import 'lib/popupmain';
+
+// Footer
+@import 'blocks/block-footer';
+
+
+// Page
+@import 'common/page';
+@import 'blocks/block-page-album';
+
+// Page User
+@import 'common/user';
+
+// Main
+@import 'common/main';
+

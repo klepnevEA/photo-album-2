@@ -1,0 +1,57 @@
+.social__list {
+  margin:0;
+  padding:0;
+  
+  list-style: none;
+}
+
+.social__item {
+  position: relative;
+  display: inline-block;
+
+  margin-left: 10px;
+
+  cursor: pointer;
+  &:first-child {
+    margin: 0;
+  }
+  &:hover {
+    .social__svg {
+      fill: #ffffff;
+    }
+  }
+}
+
+.social__popup-holder {
+  display: none;
+  position: absolute;
+  padding-top: 10px;
+  bottom: -135px;
+  z-index: 115;
+  .edit & {
+    display: block;
+  }
+}
+
+.social {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 8px;
+  background: rgba(41, 64, 69, 0.7);
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    fill: rgba(253, 253, 253, 0.7);
+  }
+}

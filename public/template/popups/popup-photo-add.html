@@ -1,0 +1,47 @@
+<div class="block_popup-photo-add">
+    <div class="block__popup-header">
+        <div class="add-album__text">Добавить фотографии</div>
+        <button class="add-album__close" ng-click="popupPhotoAdd.cancel()">
+            <svg class="add-album__icon-close">
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="block__photo-add">
+        <div class="photo-add__title">
+            <span>Название</span>
+            <input type="text" class="photo-add__input-bdb" ng-model="photo.name">
+        </div>
+
+        <div class="photo-add__list" ngf-drop ng-model="photo.image"
+             ngf-drag-over-class="'active'" ngf-multiple="true"
+             ngf-allow-dir="true" accept="image/*" ngf-pattern="'image/*'">
+
+            <div class="photo-add__list-item__wrapper" ng-repeat="image in photo.image">
+                <div class="button-close__wrapper">
+                    <button class="button button__close" ng-click="photo.image.splice(images.image.indexOf(image), 1)">
+                        <svg class="button__close-svg">
+                            <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="photo-add__list-item" ngf-background="image"></div>
+            </div>
+
+            <div class="photo-add__list-center" ng-show="!photo.image">
+                <svg class="cam">
+                    <use xlink:href="img/sprite.svg#cam"></use>
+                </svg>
+                <div class="photo-add__list-text">
+                    Перетащите фото сюда <br>или <a class="photo-add__link" ngf-select ngf-multiple="true" ng-model="photo.image">выберите файл</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block__popup-save">
+        <div class="popup-save__wrapper">
+            <button class="popup-save__button-save" ng-click="popupPhotoAdd.add()">Сохранить</button>
+            <button class="button__cansel" ng-click="popupPhotoAdd.cancel()">Отменить</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,218 @@
+/*Album styles*/
+.header__album {
+  display: flex;
+
+  min-height: 240px;
+
+  align-items: center;
+  flex: 9 1 auto;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.header__album-wrapper {
+  display: flex;
+
+  margin: 20px 0 0 40px;
+
+  align-items: center;
+  align-self: flex-start;
+  flex: 1 1 auto;
+  @include breakpoint ($screen2) {
+    margin-left: 20px;
+  }
+  @include breakpoint ($screen3) {
+    margin-top:20px;
+  }
+}
+
+.header__album-info {
+  width: 955px;
+
+  text-align:center;
+
+  flex: 5 1 auto;
+  @include breakpoint ($screen1) {
+    width: 730px;
+  }
+  @include breakpoint ($screen2) {
+    width: 565px;
+  }
+  @include breakpoint ($screen3) {
+    width: 290px;
+    margin-top:10px;
+  }
+  @include breakpoint ($screen4) {
+    width: 270px;
+    margin-top:10px;
+  }
+}
+
+.header__album-text {
+  margin-bottom:30px;
+
+  color: #ffffff;
+
+  font-family: $font1;
+  font-size: 16px;
+  font-weight: 100;
+
+  @include breakpoint ($screen3) {
+    margin-bottom: 15px;
+  }
+}
+
+.header__album-textName {
+  margin-bottom: 20px;
+
+  color: #ffffff;
+
+  font-family: $font2;
+  font-size: 21px;
+}
+.header__btn_album {
+  width: 10px;
+
+  flex: 1 0 auto;
+  @include breakpoint ($screen3) {
+    display:none;
+
+    width: 0;
+    height: 0;
+  }
+}
+.header__bar-text {
+  margin-right: 45px;
+
+  font-family: $font2;
+  font-size: 16px;
+  font-weight: 300;
+
+  @include breakpoint ($screen3) {
+    display:none;
+
+    width:0;
+    height:0;
+  }
+}
+.header__bar-number {
+  margin-right: 5px;
+
+  font-family: $font2;
+  font-size: 16px;
+  font-weight: 300;
+
+  @include breakpoint ($screen3) {
+    margin-right: 30px;
+  }
+}
+.header__bar-svg {
+  display:none;
+
+  width:0;
+  height:0;
+
+  fill:#353535;
+  @include breakpoint ($screen3) {
+    display:block;
+
+    width:20px;
+    height:20px;
+    margin-right: 5px;
+  }
+}
+.header__bar-wrapper_album {
+  display: flex;
+
+  width: 100%;
+  height: 60px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.header-album__edit {
+  position: absolute;
+  z-index: 10;
+  top: -100%;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+
+  transition: all .5s;
+
+  opacity: 0;
+  background-color: rgba(#000, .65);
+
+  .edit-mode & {
+    top: 0;
+
+    opacity: 1;
+  }
+
+  &-profile {
+    position: absolute;
+    top: 26px;
+    left: 20px;
+  }
+
+  &-background {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+
+    transform: translateY(-50%);
+
+    @include breakpoint($screen3) {
+      display: none;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    padding-top: 25px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-inputs {
+    width: 55%;
+  }
+
+  &-label {
+    display: block;
+
+    margin-bottom: 10px;
+  }
+
+  &-input {
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px;
+    padding: 0 1em;
+
+    resize: none;
+    text-align: center;
+
+    color: #323232;
+    border: none;
+    border-radius: 15px;
+
+    font-family: $font1;
+    font-size: 16px;
+    font-weight: 300;
+    &_textarea {
+      height: 4em;
+      padding: 1em;
+    }
+  }
+}
+

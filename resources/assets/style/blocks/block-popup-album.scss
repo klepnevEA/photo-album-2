@@ -1,0 +1,344 @@
+
+.block_popup-album {
+  overflow: hidden;
+
+  width: 680px;
+  min-height: 500px;
+  margin: 0 auto;
+
+  border-radius: 5px;
+
+  @include breakpoint($screen2) {
+    width: 597px;
+  }
+  @include breakpoint($screen3) {
+    width: 300px;
+  }
+  @include breakpoint($screen4) {
+    width: 300px;
+  }
+}
+
+.block__popup-header {
+  display: flex;
+
+  height: 67px;
+
+  background-color: #f1f1f1;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-album__text {
+  padding-left: 17px;
+
+  font-family: $font2;
+  font-weight: bold;
+
+  @include rem(font-size, 21px);
+}
+
+.add-album__close {
+  padding-right: 20px;
+
+  border: none;
+  background: none;
+}
+
+.add-album__icon-close {
+  width: 27px;
+  height: 26px;
+
+  fill: #a0a09f;
+  &:hover {
+    fill: #5e5e5e;
+  }
+}
+
+.block__album-desc {
+  display: flex;
+  flex-direction: column;
+
+  padding-right: 20px;
+  padding-left: 51px;
+
+  background: #fff;
+
+  @include breakpoint($screen3) {
+    padding-right: 10px;
+    padding-left: 20px;
+  }
+}
+
+.title__input {
+  width: 492px;
+  padding-right: 18px;
+  padding-left: 20px;
+
+  border: 1px solid #d8d6d6;
+  border-radius: 25px;
+
+  line-height: 40px;
+
+  @include breakpoint($screen3) {
+    width: 225px;
+    padding-left: 20px;
+
+  }
+  @include breakpoint($screen4) {
+    padding-left: 20px;
+  }
+  &:hover, &:active, &:focus {
+    border: 1px solid #28bbf0;
+
+  }
+}
+
+.desc__input {
+  width: 472px;
+  padding: 13px 20px;
+
+  resize: none;
+
+  border: 1px solid #d8d6d6;
+  border-radius: 25px;
+
+  @include breakpoint($screen3) {
+    width: 225px
+  }
+  @include breakpoint($screen4) {
+    width: 225px
+  }
+  &:hover, &:active, &:focus {
+    border: 1px solid #28bbf0;
+
+  }
+}
+
+.edit__label, .__label {
+  display: flex;
+  flex-direction: row;
+
+  padding-top: 20px;
+
+  font-family: $font1;
+
+  align-items: baseline;
+  @include breakpoint($screen3) {
+    flex-direction: column;
+  }
+  @include breakpoint($screen4) {
+    flex-direction: column;
+
+    font-weight: 700;
+  }
+  &:first-child {
+    padding-top: 40px;
+  }
+
+  &:before {
+    display: inline-block;
+
+    width: 70px;
+    padding-right: 20px;
+
+    content: attr(data-text);
+
+    font-weight: bold;
+  }
+}
+
+.album-desc__load {
+  display: flex;
+  flex-direction: row;
+
+  padding-top: 20px;
+
+  align-items: center;
+  @extend %clearfix;
+
+}
+
+.warning__wrapper {
+  display: flex;
+  flex-direction: row;
+
+  @include breakpoint($screen3) {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+  @include breakpoint($screen4) {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+.photo-card-fon__wrapper {
+  width: 50px;
+  height: 50px;
+  padding: 20px;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  @include breakpoint($screen3) {
+    padding: 10px;
+  }
+  @include breakpoint($screen4) {
+    padding: 10px;
+  }
+  &:hover .album-card_avatar-hover {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    text-align: left;
+  }
+}
+
+.photo-card__fon {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.photo-card__fon-img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.button__load {
+  display: inline-block;
+
+  width: 165px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: #28bbf0;
+  border: 1px solid #28bbf0;
+  border-radius: 25px;
+  background: none;
+
+  font-family: $font2;
+  font-weight: bold;
+  line-height: 40px;
+
+  @include rem(font-size, 14px);
+  &:hover {
+    color: #fff;
+    background: rgba(#28bbf0, .8);
+  }
+}
+
+.load__warning {
+  width: 200px;
+  padding: 5px;
+  padding-left: 20px;
+
+  color: #111;
+  color: rgba(#323232, .8);
+
+  font-family: $font1;
+
+  @include rem(font-size, 14px);
+  @include breakpoint($screen3) {
+    padding: 5px;
+  }
+  @include breakpoint($screen4) {
+    padding: 5px;
+  }
+  b {
+    font-weight: bold;
+  }
+}
+
+.button__cansel {
+  display: inline-block;
+
+  padding-left: 10px;
+
+  color: rgba(#28bbf0, .8);
+  border: none;
+  background: none;
+
+  font-weight: 700;
+}
+
+.popup-save__button-delete {
+  text-decoration: none;
+
+  .button__delete-text {
+    @include breakpoint($screen3) {
+      display: none;
+    }
+  }
+  .button.button__delete {
+    @include breakpoint($screen3) {
+      width: 60px;
+      padding: 0;
+    }
+  }
+}
+
+.photo-card__wrapper {
+  padding: 5px 35px 5px 5px;
+
+  @include breakpoint($screen3) {
+    padding-right: 5px;
+  }
+  @include breakpoint($screen4) {
+    padding-right: 5px;
+  }
+  &:hover .album-card_avatar-hover {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    text-align: left;
+  }
+}
+
+.photo-card {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+}
+
+.popup-save__button-save {
+  width: 115px;
+  height: 40px;
+  padding: 0 10px;
+
+  color: #fff;
+  border: 0;
+  border-radius: 25px;
+  background: #28bbf0;
+
+  font-family: $font2;
+  font-weight: bold;
+  &:hover {
+    background: #27b3e5;
+  }
+}

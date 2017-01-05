@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="container__photo-title">По запросу «<span ng-bind="query"></span>» найдено <span ng-bind="resultsLength"></span> результатов</div>
+    <div class="grid grid_var1">
+        <div class="grid__item" ng-repeat="photo in photos">
+            <photo-card></photo-card>
+        </div>
+    </div>
+</div>

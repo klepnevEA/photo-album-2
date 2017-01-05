@@ -1,0 +1,313 @@
+.block_popup-photo-add {
+  overflow: hidden;
+
+  width: 680px;
+  min-height: 595px;
+  margin: 0 auto;
+
+  border-radius: 5px;
+
+  justify-content: space-between;
+  @include breakpoint($screen2) {
+    width: 598px;
+    height: 500px;
+  }
+  @include breakpoint($screen3) {
+    width: 300px;
+    height: 500px;
+  }
+  @include breakpoint($screen4) {
+    width: 300px;
+    height: 500px;
+  }
+}
+
+.block__photo-add {
+  padding: 20px;
+  padding-top: 40px;
+
+  background: #fff;
+
+  @include breakpoint($screen2) {
+    width: 578px;
+    padding: 10px;
+  }
+  @include breakpoint($screen3) {
+    width: 280px;
+    padding: 10px;
+  }
+  @include breakpoint($screen4) {
+    width: 280px;
+    padding: 10px;
+  }
+}
+
+.photo-add__title {
+  padding-bottom: 40px;
+  span {
+    padding-right: 20px;
+
+    font-family: $font1;
+    font-size: 16px;
+    font-weight: 300;
+    &:first-child {
+      font-weight: 800;
+    }
+  }
+}
+
+.photo-add__input-bdb {
+  border: none;
+  border-bottom: 1px solid #555555;
+  width: 32em;
+
+  @include breakpoint($screen1) {
+    width: 29em;
+  }
+  @include breakpoint($screen1) {
+    width: 10em;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #28bbf0;
+  }
+}
+
+.photo-add__list {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
+  min-height: 320px;
+  padding: 15px;
+
+  border: 3px dashed #f1f1f1;
+  border-radius: 17px;
+  background: #f9f9f9;
+
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  @include breakpoint($screen3) {
+    min-height: 280px;
+
+  }
+  @include breakpoint($screen4) {
+    min-height: 280px;
+  }
+  &.active {
+    border-color: #28bbf0;
+    .photo-add__list-center {
+      display: none;
+    }
+  }
+}
+
+.photo-add__list-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.photo-add__list-empty {
+  flex-direction: column;
+
+  padding: 0;
+
+  @extend .photo-add__list;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-add__list-text {
+  padding: 20px;
+
+  text-align: center;
+
+  color: #d1d1d1;
+
+  font-family: $font1;
+  font-weight: 300;
+  line-height: 1.5;
+
+  @include breakpoint($screen3) {
+    display: none;
+  }
+  @include breakpoint($screen4) {
+    display: none;
+  }
+}
+
+.photo-add__list-item__wrapper {
+  position: relative;
+
+  width: 148px;
+  height: 148px;
+
+  @include breakpoint($screen2) {
+    width: 127px;
+    height: 127px;
+  }
+  @include breakpoint($screen3) {
+    width: 66px;
+    height: 66px;
+  }
+  @include breakpoint($screen4) {
+    width: 66px;
+    height: 66px;
+  }
+}
+
+.photo-add__list-item {
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  bottom: 0;
+
+  overflow: hidden;
+
+  width: 135px;
+  height: 135px;
+
+  border-radius: 10px;
+
+  @include breakpoint($screen2) {
+    width: 114px;
+    height: 114px;
+  }
+  @include breakpoint($screen3) {
+    width: 59px;
+    height: 59px;
+  }
+  @include breakpoint($screen4) {
+    width: 59px;
+    height: 59px;
+  }
+}
+
+.photo-add__list-item-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.cam {
+  display: block;
+
+  width: 40px;
+  height: 32px;
+  margin: 0 auto;
+
+  fill: #d1d1d1;
+}
+
+.photo-add__link {
+  text-decoration: none;
+
+  color: #28bbf0;
+}
+
+.photo-add__list-error {
+  display: inline-block;
+
+  margin-top: 20px;
+  padding: 5px;
+  padding-right: 20px;
+
+  color: rgba(#323232, .6);
+  border-radius: 5px;
+  background: #ffe3e3;
+
+  font-weight: bold;
+}
+
+.button-close__wrapper {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+
+  width: 26px;
+  height: 26px;
+
+  @include breakpoint($screen3) {
+    width: 14px;
+    height: 14px;
+  }
+  @include breakpoint($screen4) {
+    width: 14px;
+    height: 14px;
+  }
+
+  .button.button__close {
+    margin: 0;
+
+    @include breakpoint($screen3) {
+      width: 14px;
+      height: 14px;
+      padding: 0;
+
+      border: 2px solid #ffffff;
+    }
+    @include breakpoint($screen4) {
+      width: 14px;
+      height: 14px;
+
+      border: 2px solid #ffffff;
+    }
+    .button__close-svg {
+      @include breakpoint($screen3) {
+        width: 4px;
+        height: 4px;
+      }
+      @include breakpoint($screen4) {
+        width: 4px;
+        height: 4px;
+      }
+    }
+  }
+}
+
+.popup-save__button-save {
+  width: 115px;
+  height: 40px;
+  padding: 0 10px;
+
+  color: #fff;
+  border: 0;
+  border-radius: 25px;
+  background: #28bbf0;
+
+  font-weight: bold;
+  font-family: $font2;
+  &:hover {
+    background: #26afe0;
+  }
+}
+
+.photo-add__list-text-phone {
+  display: none;
+
+  width: 135px;
+  margin-top: 20px;
+
+  text-align: center;
+
+  color: #28bbf0;
+  border: 1px solid #28bbf0;
+  border-radius: 25px;
+  background: none;
+
+  line-height: 40px;
+
+  @include breakpoint($screen3) {
+    display: block;
+  }
+  @include breakpoint($screen4) {
+    display: block;
+  }
+}

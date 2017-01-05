@@ -1,0 +1,174 @@
+.block_auth {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  box-sizing: inherit;
+  width: 280px;
+
+  border-radius: 15px;
+  background: #FFFFFF;
+
+  @include breakpoint($screen4) {
+    width: 300px;
+  }
+  align-items: center;
+  .text_forgot {
+    display: block;
+
+    margin-bottom: 20px;
+
+    @include rem(font-size, 14px);
+    @include rem(width, 241px);
+  }
+  .text_forgot_title {
+    display: block;
+
+    margin-top: 20px;
+
+    font-family: $font1;
+    font-weight: 700;
+  }
+  .text_forgot_text {
+    font-family: $font1;
+    font-weight: 300;
+  }
+  .input {
+    width: 235px;
+
+    color: black;
+    border: none;
+    border-bottom: 1px solid #e1e1e1;
+
+    font-family: $font1;
+    font-size: 1rem;
+    font-weight: 300;
+
+    @include rem(height, 40px);
+    @include rem(padding-left, 45px);
+    &:focus + .envelope_svg, &:focus + .password_svg, &:focus + .name_svg {
+      fill: #28bbf0;
+    }
+  }
+
+  .hide_button {
+    display: none;
+  }
+  //эта кнопка появляется при нажатии на ссылку Войти
+  .marg_bot {
+    margin-bottom: 20px;
+  }
+  .envelope_svg, .password_svg, .name_svg {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+
+    transform: translateY(-50%);
+
+    @include rem(width, 15px);
+    @include rem(height, 13px);
+    fill: #cccccc;
+  }
+  .hover_email, .hover_password {
+    opacity: 0.6;
+  }
+  .hover_email:hover, .hover_password:hover {
+    opacity: 1;
+  }
+  .label {
+    position: relative;
+
+    width: 100%;
+    &:hover .envelope_svg, &:hover .password_svg, &:hover .name_svg {
+      fill: #28bbf0;
+    }
+
+  }
+
+  .text_forget {
+    display: block;
+
+    margin-left: 20px;
+
+    vertical-align: middle;
+    text-decoration: none;
+
+    color: #5fccf4;
+
+    font-family: $font1;
+    font-weight: 700;
+
+    @include rem(height, 40px);
+    @include rem(line-height, 40px);
+    align-self: flex-start;
+  }
+  .error_login {
+    margin: .5em auto 0;
+    padding: .25em;
+
+    vertical-align: middle;
+
+    opacity: 0.6;
+    border-radius: 3px;
+    background: #ffe0e0;
+
+    font-family: $font1;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @include rem(width, 230px);
+    //display: none;
+  }
+  .button_enter {
+    margin-bottom: 10px;
+
+    vertical-align: middle;
+
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    background: #28bbf0;
+
+    font-family: $font2;
+    font-weight: 700;
+
+    @include rem(height, 40px);
+    @include rem(width, 240px);
+    @include rem(line-height, 40px);
+    @include rem(font-size, 14px);
+    &:hover {
+      cursor: pointer;
+
+      background: #24b0e3;
+    }
+  }
+  .registration_text {
+    display: block;
+
+    width: 84%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+  }
+  .text_registration {
+    display: block;
+
+    margin: 0 auto 15px;
+
+    font-family: $font1;
+    font-size: 14px;
+    font-weight: 300;
+    .link_registration {
+      text-decoration: none;
+
+      color: #5fccf4;
+
+      font-family: $font1;
+      font-weight: 700;
+    }
+  }
+  .text_registration_width {
+    @include rem(width, 240px);
+  }
+}

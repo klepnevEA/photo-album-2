@@ -1,0 +1,38 @@
+<div class="new-photo-list">
+    <div class="container">
+        <div class="new-photo-list__title">Новое в мире</div>
+        <span ng-if="!photos || !photos.length">В мире пока нет фото.</span>
+        <div class="grid grid_var1">
+            <div class="grid__item" ng-repeat="photo in photos">
+                <photo-card></photo-card>
+            </div>
+        </div>
+        <div class="new-photo-list__button" ng-click="mainState.getMorePhoto()">
+            <button class="button button__showMore">Показать еще</button>
+        </div>
+    </div>
+</div>
+<div class="album-list">
+    <div class="album-list__button">
+        <button class="button button__add" ng-click="mainState.albumAdd()">
+            <svg class="button__add-svg">
+                <use xlink:href="img/sprite.svg#add"></use>
+            </svg>
+            <div class="button__add-text">Добавить</div>
+        </button>
+    </div>
+    <div class="container">
+        <div class="album-list__title">Мои альбомы</div>
+        <span ng-if="!albums || !albums.length">У Вас пока нет альбомов</span>
+        <div class="grid grid_var2">
+            <div class="grid__item" ng-repeat="album in albums">
+                <album-card album-id="{{album.id}}"></album-card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup">
+    <popup-album-add></popup-album-add>
+    <popup-album-edit></popup-album-edit>
+</div>

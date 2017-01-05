@@ -1,0 +1,87 @@
+.album-list__title, .new-photo-list__title {
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  font-family: $font2;
+  font-weight: 700;
+
+  @include rem(font-size, 42px);
+  @include breakpoint($screen3) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    text-align: center;
+
+    @include rem(font-size, 30px);
+  }
+  @include breakpoint($screen4) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    text-align: center;
+
+    @include rem(font-size, 30px);
+  }
+}
+
+.new-photo-list, .album-list {
+  width: 100%;
+}
+
+.album-list {
+  position: relative;
+
+  padding-bottom: 40px;
+
+  background: #f6f6f6;
+
+  @include breakpoint($screen3) {
+    padding-bottom: 20px;
+
+  }
+  @include breakpoint($screen4) {
+    padding-bottom: 20px;
+
+  }
+}
+
+.new-photo-list__button {
+  margin-bottom: 60px;
+
+  @include breakpoint($screen3) {
+    margin-bottom: 30px;
+
+  }
+  @include breakpoint($screen4) {
+    margin-bottom: 30px;
+
+  }
+  .button {
+    margin: 0 auto
+  }
+}
+
+.album-list__button {
+  position: absolute;
+  z-index: 10;
+  top: 60px;
+  right: 40px;
+
+  @include breakpoint($screen1) {
+    right: 38px;
+  }
+  @include breakpoint($screen2) {
+    right: 25px;
+  }
+  @include breakpoint($screen3) {
+    top: 26px;
+    right: 10px;
+  }
+  @include breakpoint($screen4) {
+    top: 26px;
+    right: 10px;
+  }
+  .button {
+    margin: 0;
+  }
+}

@@ -1,0 +1,131 @@
+
+.footer {
+  position: relative;
+
+  padding: 20px 0;
+
+  color: #fff;
+  border-top: 1px solid #ccc;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @extend %clearfix;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 auto;
+    padding: 0 20px;
+
+    flex: 0 0 auto;
+    align-items: flex-start;
+    @include rem(max-width, 1182px);
+
+    @include breakpoint($screen2) {
+      max-width: 720px;
+    }
+    @include breakpoint($screen3) {
+      max-width: 320px;
+      flex-direction: column;
+    }
+    @include breakpoint($screen4) {
+      flex-direction: column;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      content: "";
+
+      opacity: 0.5;
+      background: #000;
+    }
+  }
+}
+
+
+.footer_section1 {
+  position: relative;
+
+  box-sizing: border-box;
+
+  flex: 1 0 40%;
+  @include breakpoint($screen3) {
+    padding: 20px 0;
+
+    text-align: center;
+
+    order: 2;
+  }
+  @include breakpoint($screen4) {
+    padding: 20px 0;
+
+    text-align: center;
+
+    order: 2;
+  }
+}
+
+.footer_top {
+  position: relative;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  flex: 1 0 20%;
+  @include breakpoint($screen3) {
+    order: 1;
+    align-self: center;
+  }
+  @include breakpoint($screen4) {
+    order: 1;
+    align-self: center;
+  }
+}
+
+.footer_top-icon {
+  width: 26px;
+  height: 21px;
+
+  opacity: .8;
+
+  fill: #fff;
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.footer_section2 {
+  position: relative;
+
+  box-sizing: border-box;
+
+  text-align: right;
+
+  opacity: .4;
+
+  font-family: $font1;
+  font-weight: 300;
+
+  flex: 1 0 40%;
+  @include breakpoint($screen3) {
+    width: 100%;
+
+    text-align: center;
+
+    order: 3;
+  }
+  @include breakpoint($screen4) {
+    text-align: center;
+
+    order: 3;
+  }
+}

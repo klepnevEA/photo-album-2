@@ -1,0 +1,307 @@
+@import 'block-socials';
+@import 'block-search.blade';
+
+.buttons__wrapper {
+  width: 50%;
+  margin: 15px auto;
+  padding: 15px;
+
+  background: #ececec;
+}
+
+.button {
+  display: flex;
+
+  margin: 10px;
+
+  cursor: pointer;
+  transition: all .5s;
+
+  outline: none;
+
+  font-family: $font2;
+  font-size: 14px;
+  font-weight: 300;
+
+  align-items: center;
+}
+
+.button__showMore {
+  width: 130px;
+  height: 40px;
+
+  color: #20b6ed;
+  border: 1px solid #20b6ed;
+  border-radius: 25px;
+  background: none;
+
+  justify-content: center;
+  &:hover {
+    color: #ffffff;
+    background: #20b6ed;
+  }
+}
+
+.button__add {
+  overflow: hidden;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 1px 1px 2px #9f9e9e;
+
+  justify-content: space-around;
+  &:hover {
+    width: 110px;
+
+    border-radius: 20px;
+    background: #20b6ed;
+    box-shadow: none;
+  }
+  &:hover .button__add-svg {
+    margin: 0;
+
+    fill: #ffffff;
+  }
+  &:hover .button__add-text {
+    display: block;
+  }
+  &-text {
+    display: none;
+
+    color: #ffffff;
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #9f9e9e;
+  }
+}
+
+.button__delete {
+  width: 115px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+  background: #ee4634;
+
+  justify-content: center;
+  &:hover {
+    background: #d21a06;
+  }
+  &-text {
+    margin-left: 10px;
+
+    color: #ffffff;
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #ffffff;
+  }
+}
+
+.button__close {
+  width: 25px;
+  height: 25px;
+
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  background: #ee4634;
+
+  justify-content: center;
+  &:hover {
+    background: #d21a06;
+  }
+  &-svg {
+    width: 12px;
+    height: 12px;
+
+    fill: #ffffff;
+    align-self: center;
+  }
+}
+
+.button__like {
+  width: 85px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+  background: #ee4634;
+
+  justify-content: center;
+  &:hover {
+    background: #d21a06;
+  }
+  &:hover .button__like-svg {
+    fill: #ffffff;
+  }
+  &-text {
+    margin-left: 10px;
+
+    color: #ffffff;
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+
+    fill: #ee4634;
+    stroke-width: 1.5px;
+    stroke: #ffffff;
+  }
+}
+
+.button__like_liked {
+  width: 85px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+  background: #ee4634;
+
+  justify-content: center;
+  &-text {
+    margin-left: 10px;
+
+    color: #ffffff;
+  }
+  .button__like-svg {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+
+    fill: #ffffff;
+    stroke-width: 1.5px;
+    stroke: #ffffff;
+  }
+}
+
+.button__edit {
+  overflow: hidden;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 1px 1px 2px #9f9e9e;
+
+  justify-content: space-around;
+  &:hover {
+    width: 150px;
+
+    border-radius: 20px;
+    background: #20b6ed;
+    box-shadow: none;
+  }
+  &:hover .button__edit-svg {
+    margin: 0;
+
+    fill: #ffffff;
+  }
+  &:hover .button__edit-text {
+    display: block;
+  }
+  &-text {
+    display: none;
+
+    color: #ffffff;
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #9f9e9e;
+  }
+}
+
+.button__off {
+  overflow: hidden;
+
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid #9f9e9e;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 1px 1px 2px #9f9e9e;
+
+  justify-content: space-around;
+  &:hover {
+    width: 100px;
+
+    border-radius: 20px;
+    background: #20b6ed;
+    box-shadow: none;
+  }
+  &:hover .button__off-svg {
+    margin: 0;
+
+    fill: #ffffff;
+  }
+  &:hover .button__off-text {
+    display: block;
+  }
+  &-text {
+    display: none;
+
+    color: #ffffff;
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #9f9e9e;
+  }
+}
+
+.button__home {
+  overflow: hidden;
+
+  width: 40px;
+  height: 40px;
+
+  white-space: nowrap;
+
+  border: none;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 1px 1px 2px #9f9e9e;
+
+  justify-content: space-around;
+  &:hover {
+    width: 130px;
+
+    border-radius: 20px;
+    background: #20b6ed;
+    box-shadow: none;
+  }
+  &:hover .button__home-svg {
+    margin: 0;
+
+    fill: #ffffff;
+  }
+  &:hover .button__home-text {
+    display: block;
+  }
+  &-text {
+    display: none;
+
+    color: #ffffff;
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #9f9e9e;
+  }
+}

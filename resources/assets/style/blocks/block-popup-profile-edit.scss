@@ -1,0 +1,289 @@
+.block_popup-profile-edit {
+  padding-top: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  width: 680px;
+
+  border-radius: 5px;
+  @extend %clearfix;
+
+  @include breakpoint($screen2) {
+    min-height: 1000px;
+    width: 595px;
+  }
+  @include breakpoint($screen3) {
+    min-height: 1000px;
+    width: 300px;
+  }
+  @include breakpoint($screen4) {
+    min-height: 1000px;
+    width: 300px;
+
+  }
+}
+.block__profile-socials {
+  border-top: 1px solid #d8d6d6;
+  padding-bottom: 20px;
+}
+
+.block_popup-album {
+  overflow: hidden;
+
+  width: 680px;
+  height: 452px;
+
+  border-radius: 5px;
+  @include breakpoint($screen3){
+    width:300px;
+  }
+}
+
+.block__popup-header {
+  display: flex;
+
+  height: 67px;
+
+  background-color: #f1f1f1;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block__popup-save {
+  @extend .block__popup-header;
+  justify-content: space-between;
+  padding-left: 20px;
+  @include breakpoint($screen3){
+    padding: 0 8px;
+  }
+
+}
+
+.header-popup__text {
+  padding-left: 17px;
+
+  @include rem(font-size, 21px);
+  font-family: $font2;
+  font-weight: bold;
+
+}
+
+.header-popup__close {
+  border: none;
+  background: none;
+  padding-right: 20px;
+}
+
+.header-popup__icon-close {
+  width: 27px;
+  height: 26px;
+
+  fill: #a0a09f;
+  &:hover {
+    fill: #5e5e5e;
+  }
+}
+
+.block__profile-desc, .block__profile-socials {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 51px;
+
+  padding-right: 18px;
+  background: #fff;
+
+  @include breakpoint($screen3) {
+    padding-left: 20px;
+  }
+  @include breakpoint($screen4) {
+    padding-left: 20px;
+  }
+}
+
+.edit__input {
+  width: 492px;
+  padding-left: 20px;
+
+  border: 1px solid #d8d6d6;
+  border-radius: 25px;
+
+  line-height: 40px;
+
+  @include breakpoint($screen4) {
+    width: 245px;
+  }
+  @include breakpoint($screen3) {
+    width: 255px }
+  @include breakpoint($screen4) {
+    width: 224px
+  }
+  &:hover,&:active{
+    border: 1px solid #28bbf0;
+
+  }
+}
+
+.name__input {
+  font-weight: 600;
+  width: 224px;
+
+  @extend .edit__input;
+  &:first-child {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  @include breakpoint($screen2){
+    width:180px;
+  }
+  @include breakpoint($screen3){
+    width:245px;
+  }
+  @include breakpoint($screen4){
+    width:245px;
+  }
+
+}
+
+.about__input{
+  width: 472px;
+  padding: 13px 20px;
+  resize: none;
+  border: 1px solid #d8d6d6;
+  border-radius: 25px;
+
+  @include breakpoint($screen3) {
+    width: 385px;
+  }
+  @include breakpoint($screen3) {
+    width: 225px;
+  }
+  @include breakpoint($screen4) {
+    width: 225px;
+  }
+  &:hover,&:active,&:focus{
+    border: 1px solid #28bbf0;
+  }
+
+}
+
+.socials__input {
+  width: 245px;
+
+  @extend .edit__input;
+}
+
+.edit__label {
+  display: flex;
+  flex-direction: row;
+
+  padding-top: 20px;
+
+  font-family: $font1;
+  font-weight: 500;
+
+  align-items: baseline;
+
+  @include breakpoint($screen3) {
+    flex-direction: column;
+
+  }
+  @include breakpoint($screen4) {
+    flex-direction: column;
+
+  }
+  &:first-child {
+    padding-top: 40px;
+  }
+  &:before {
+    display: inline-block;
+
+    width: 70px;
+    padding-right: 20px;
+
+    content: attr(data-text);
+    font-weight: bold;
+  }
+}
+.socials__input{
+  @extend .edit__input;
+  width: 245px
+}
+
+.album-desc__load {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.button__load-photo{
+  line-height: 40px;
+  text-align: center;
+
+  border-radius: 25px;
+  background: #28bbf0;
+  border: none;
+
+    padding: 0 20px;
+
+  text-decoration: none;
+
+  color: #fff;
+
+  @include breakpoint($screen2){
+    padding: 0 10px;
+  }
+  @include breakpoint($screen3){
+    padding: 0 10px;
+  }
+  &:hover{
+    background: #26afe0;
+  }
+}
+
+.button__load-fon {
+  text-align: center;
+
+  border: 1px solid #28bbf0;
+  border-radius: 25px;
+
+  line-height: 40px;
+  background: none;
+
+  padding: 0 20px;
+
+  color: #28bbf0;
+
+  &:hover{
+    color: #fff;
+    background: #28bbf0;
+
+  }
+}
+
+.socials__label {
+  padding-top: 10px;
+
+  @extend .edit__label;
+}
+
+
+.button__cansel {
+  padding-left: 20px;
+
+  text-decoration: none;
+
+  color: #28bbf0;
+
+  flex-grow: 1;
+  @include breakpoint($screen3){
+    padding-left: 5px;
+
+  }
+  @include breakpoint($screen4){
+    padding-left: 5px;
+
+  }
+}

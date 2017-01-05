@@ -1,0 +1,313 @@
+@import 'block-header-album';
+@import 'block-header-search';
+@import 'block-header-profile-small-1';
+@import 'block-header-profile-small';
+@import 'block-header-edit';
+
+.header {
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+
+  background-image: url(../img/sea.jpg);
+  background-position: 50% 0;
+  background-size: cover;
+
+  flex-flow: row wrap;
+  align-content: space-between;
+  @include breakpoint ($screen3) {
+    align-items: flex-start;
+  }
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent);
+  }
+}
+
+.header-bg {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  //overflow: hidden;
+
+  width: 100%;
+
+  flex-flow: row wrap;
+  align-content: space-between;
+}
+
+.header__profile {
+  display: flex;
+
+  min-height: 240px;
+
+  transition: all .5s;
+
+  align-items: center;
+  @include breakpoint ($screen3) {
+    width: 240px;
+
+    flex-flow: column nowrap;
+    flex: 3 1 auto;
+  }
+  .edit-mode & {
+    opacity: 0;
+  }
+}
+
+.header__profile-avatar {
+  overflow: hidden;
+
+  width: 123px;
+  height: 123px;
+  margin-left: 40px;
+
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #fff;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  flex: 1 0 auto;
+  @include breakpoint ($screen2) {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+  }
+  @include breakpoint ($screen3) {
+    width: 50px;
+    height: 50px;
+    margin: 20px 0 10px;
+  }
+}
+
+.header__profile_img {
+  max-width: 123px;
+
+  @include breakpoint ($screen2) {
+    max-width: 100px;
+  }
+  @include breakpoint ($screen3) {
+    max-width: 50px;
+  }
+}
+
+.header__profile-info {
+  padding: 45px;
+
+  text-align: left;
+
+  flex: 9 1 auto;
+  @include breakpoint ($screen2) {
+    padding: 25px;
+  }
+  @include breakpoint ($screen3) {
+    padding-bottom: 20px;
+
+    text-align: center;
+
+    align-self: center;
+  }
+}
+
+.header__profile-name {
+  margin-bottom: 25px;
+
+  color: #ffffff;
+
+  font-family: $font2;
+  font-size: 21px;
+
+  @include breakpoint ($screen2) {
+    margin-bottom: 20px;
+  }
+}
+
+.header__profile-text {
+  width: 450px;
+  margin-bottom: 30px;
+
+  color: #ffffff;
+
+  font-family: $font1;
+  font-size: 16px;
+  font-weight: 100;
+
+  @include breakpoint ($screen1) {
+    width: 350px;
+  }
+  @include breakpoint ($screen2) {
+    width: 240px;
+  }
+}
+
+.header__btn {
+  width: 10px;
+  min-height: 240px;
+
+  transition: all .5s;
+
+  flex: 1 0 auto;
+  .edit-mode & {
+    opacity: 0;
+  }
+}
+
+.button__off_profile {
+  overflow: hidden;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: 1px 1px 2px #9f9e9e;
+
+  justify-content: space-around;
+  @include breakpoint ($screen3) {
+    visibility: hidden;
+
+    width: 0;
+    height: 0;
+  }
+  &:hover {
+    width: 100px;
+
+    border-radius: 20px;
+    background: #20b6ed;
+    box-shadow: none;
+  }
+  &:hover .button__off-svg {
+    margin: 0;
+
+    fill: #ffffff;
+  }
+  &:hover .button__off-text {
+    display: block;
+  }
+  &-text {
+    display: none;
+
+    color: #ffffff;
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #9f9e9e;
+  }
+}
+
+.header__btn-wrapper {
+  display: flex;
+
+  margin: 10px 30px;
+
+  align-items: flex-end;
+  flex-flow: column;
+  align-self: flex-start;
+  @include breakpoint ($screen2) {
+    margin: 10px 10px;
+  }
+  @include breakpoint ($screen3) {
+    margin: 10px 0px;
+  }
+}
+
+.header__btn-wrapper_screen {
+  display: flex;
+
+  width: 110px;
+  margin: 10px 30px;
+
+  align-items: flex-start;
+  @include breakpoint ($screen2) {
+    margin: 10px 10px;
+  }
+  @include breakpoint ($screen3) {
+    margin: 10px 0px;
+  }
+}
+
+.header__btn-screen {
+  display: none;
+
+  @include breakpoint ($screen3) {
+    display: block;
+
+    width: 40px;
+  }
+  @include breakpoint ($screen4) {
+    width: 10px;
+  }
+}
+
+.header__bar {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  overflow: hidden;
+
+  width: 100%;
+  height: 60px;
+
+  background: rgba(#eeefef, .85);
+
+  align-items: center;
+  justify-content: flex-end;
+  @include breakpoint ($screen3) {
+    justify-content: center;
+  }
+}
+
+.header__bar-wrapper {
+  padding-right: 10%;
+
+  @include breakpoint ($screen3) {
+    padding: 0;
+  }
+}
+
+.header__notification {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  z-index: 15;
+
+  box-sizing: border-box;
+  width: 480px;
+  margin-left: -240px;
+  padding: .5em 0;
+
+  transition: top .35s;
+  text-align: center;
+
+  opacity: .95;
+  color: #323232;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+
+  font-size: 1rem;
+
+  @include breakpoint($screen3) {
+    width: 260px;
+    margin-left: -130px;
+  }
+
+  &.active {
+    top: 0;
+  }
+}

@@ -1,0 +1,222 @@
+<header class="header" ng-class="editMode" ngf-background="user.background || background || 'img/no-background.jpg'">
+    <div class="header__notification" ng-bind="notification.message" ng-class="{active: showNotification}"></div>
+    <div class="header-bg">
+        <div class="header__edit-bg">
+            <section class="header__edit">
+                <div class="header__edit-avatar" ngf-background="user.avatar || user.avatar_url || 'img/no-avatar.jpg'">
+                    <button class="header__edit-photo" ngf-select ng-model="user.avatar">
+                        <svg class="header__edit-cam">
+                            <use xlink:href="img/sprite.svg#cam"></use>
+                        </svg>
+                        <div class="header__edit-change">Изменить фото</div>
+                    </button>
+                </div>
+
+                <section class="header__edit-info">
+                    <form action="" class="header__edit-form">
+                        <input type="text" class="header__edit-input1" placeholder="Имя Фамилия" ng-model="user.name">
+                        <textarea class="header__edit-textarea" placeholder="О себе" ng-model="user.about"></textarea>
+                    </form>
+                    <div class="header__socials">
+                        <ul class="social__list">
+                            <li class="social__item" ng-click="">
+                                <a class="social">
+                                    <svg class="social__svg">
+                                        <use xlink:href="img/sprite.svg#soc_vk"></use>
+                                    </svg>
+                                </a>
+                                <div class="social__popup-holder">
+                                    <section class="social__popup">
+                                        <input type="text" class="social__popup-input"
+                                               placeholder="https://vk.com/" ng-model="user.social_vk">
+                                        <div class="social__popup-wrapper">
+                                            <button class="button button__showMore cancel">Отменить</button>
+                                        </div>
+                                        <div class="social__popup-wrapper">
+                                            <button class="button button__showMore save">Сохранить</button>
+                                        </div>
+                                    </section>
+                                </div>
+                            </li>
+                            <li class="social__item" ng-click="">
+                                <a class="social soc-fb">
+                                    <svg class="social__svg soc-fb__svg">
+                                        <use xlink:href="img/sprite.svg#soc_fb"></use>
+                                    </svg>
+                                </a>
+                                <div class="social__popup-holder">
+                                    <section class="social__popup">
+                                        <input type="text" class="social__popup-input"
+                                               placeholder="https://www.facebook.com/" ng-model="user.social_fb">
+                                        <div class="social__popup-wrapper">
+                                            <button class="button button__showMore cancel">Отменить</button>
+                                        </div>
+                                        <div class="social__popup-wrapper">
+                                            <button class="button button__showMore save">Сохранить</button>
+                                        </div>
+                                    </section>
+                                </div>
+                            </li>
+                            <li class="social__item" ng-click="">
+                                <a class="social soc-twitter">
+                                    <svg class="social__svg soc-twitter__svg">
+                                        <use xlink:href="img/sprite.svg#soc_twitter"></use>
+                                    </svg>
+                                </a>
+                                <div class="social__popup-holder">
+                                    <section class="social__popup">
+                                        <input type="text" class="social__popup-input"
+                                               placeholder="https://twitter.com/" ng-model="user.social_tw">
+                                        <div class="social__popup-wrapper">
+                                            <button class="button button__showMore cancel">Отменить</button>
+                                        </div>
+                                        <div class="social__popup-wrapper">
+                                            <button class="button button__showMore save">Сохранить</button>
+                                        </div>
+                                    </section>
+                                </div>
+                            </li>
+                            <li class="social__item" ng-click="">
+                                <a class="social soc-google">
+                                    <svg class="social__svg soc-google__svg">
+                                        <use xlink:href="img/sprite.svg#soc_google"></use>
+                                    </svg>
+                                </a>
+                                <div class="social__popup-holder">
+                                    <section class="social__popup">
+                                        <input type="text" class="social__popup-input"
+                                               placeholder="https://plus.google.com/" ng-model="user.social_g">
+                                        <div class="social__popup-wrapper">
+                                            <button class="button button__showMore cancel">Отменить</button>
+                                        </div>
+                                        <div class="social__popup-wrapper">
+                                            <button class="button button__showMore save">Сохранить</button>
+                                        </div>
+                                    </section>
+                                </div>
+                            </li>
+                            <!--<li class="social__item">
+                                <a class="social soc-email">
+                                    <svg class="social__svg soc-email__svg">
+                                        <use xlink:href="img/sprite.svg#soc_email"></use>
+                                    </svg>
+                                </a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <section class="header__edit-btn">
+                <button class="header__edit-changeColor" ngf-select ng-model="user.background">
+                    <svg class="header__edit-cam-bg">
+                        <use xlink:href="img/sprite.svg#cam"></use>
+                    </svg>
+                    <div class="header__edit-change-bg">Изменить фон</div>
+                </button>
+            </section>
+        </div>
+        <section class="header__btn-screen">
+            <div class="header__btn-wrapper_screen">
+                <button class="button button__off" ng-click="header.logoutUser()" ng-if="buttons.logout">
+                    <svg class="button__off-svg">
+                        <use xlink:href="img/sprite.svg#off"></use>
+                    </svg>
+                    <div class="button__off-text">Выйти</div>
+                </button>
+            </div>
+        </section>
+        <section class="header__profile">
+            <div class="header__profile-avatar" ngf-background="user.avatar || user.avatar_url || 'img/no-avatar.jpg'">
+            </div>
+            <section class="header__profile-info">
+                <div class="header__profile-name" ng-bind="user.name + ' ' + (user.surname || '')"></div>
+                <div class="header__profile-text" ng-bind="user.about"></div>
+                <div class="header__socials">
+                    <ul class="social__list">
+                        <li class="social__item" ng-if="user.social_vk">
+                            <a ng-href="{{user.social_vk}}" class="social" target="_blank">
+                                <svg class="social__svg">
+                                    <use xlink:href="img/sprite.svg#soc_vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item" ng-if="user.social_fb">
+                            <a ng-href="{{user.social_fb}}" class="social soc-fb" target="_blank">
+                                <svg class="social__svg soc-fb__svg">
+                                    <use xlink:href="img/sprite.svg#soc_fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item" ng-if="user.social_tw">
+                            <a ng-href="{{user.social_tw}}" class="social soc-twitter" target="_blank">
+                                <svg class="social__svg soc-twitter__svg">
+                                    <use xlink:href="img/sprite.svg#soc_twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item" ng-if="user.social_g">
+                            <a ng-href="{{user.social_g}}" class="social soc-google" target="_blank">
+                                <svg class="social__svg soc-google__svg">
+                                    <use xlink:href="img/sprite.svg#soc_google"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a ng-href="mailto:{{user.email}}" class="social soc-email">
+                                <svg class="social__svg soc-email__svg">
+                                    <use xlink:href="img/sprite.svg#soc_email"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section class="header__btn">
+            <div class="header__btn-wrapper">
+                <button class="button button__home" ui-sref="main" ng-if="buttons.home">
+                    <svg class="button__home-svg">
+                        <use xlink:href="img/sprite.svg#home"></use>
+                    </svg>
+                    <div class="button__home-text">На главную</div>
+                </button>
+                <button class="button button__edit" ng-if="buttons.edit" ng-click="header.openEditMode()">
+                    <svg class="button__edit-svg">
+                        <use xlink:href="img/sprite.svg#edit"></use>
+                    </svg>
+                    <div class="button__edit-text">Редактировать</div>
+                </button>
+                <button class="button button__off_profile" ng-if="buttons.logout" ng-click="header.logoutUser()">
+                    <svg class="button__off-svg">
+                        <use xlink:href="img/sprite.svg#off"></use>
+                    </svg>
+                    <div class="button__off-text">Выйти</div>
+                </button>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="header__bar">
+        <div class="header__bar-wrapper">
+            <div class="button__search">
+                <form action="" class="button__search-form">
+                    <label for="" class="button__search-label">
+                        <button class="button__search-btn" ui-sref="search({query: query})">
+                            <svg class="button__search-svg">
+                                <use xlink:href="img/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                        <input type="text" class="button__search-input" placeholder="Исследовать мир" ng-model="query">
+                    </label>
+                </form>
+            </div>
+        </div>
+        <div class="header__edit-bar">
+            <button class="button button__showMore" ng-click="header.closeEditMode()">Отменить</button>
+            <button class="button button__showMore" ng-click="header.editUser()">Сохранить</button>
+        </div>
+    </section>
+</header>

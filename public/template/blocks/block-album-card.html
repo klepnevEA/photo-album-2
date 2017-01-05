@@ -1,0 +1,19 @@
+<div class="block_album-card__wrapper">
+    <div class="album-card__img" ui-sref="album({id: album.id})">
+        <img ng-src="{{album.cover.thumbnail_url}}" class="photo-card__img-image">
+        <div class="album-card-link__hover">
+            <a href="" class="album-card__link">
+                <p ng-bind="album.description"></p>
+                <p><span ng-bind="album.photosCount"></span> фото</p>
+            </a>
+        </div>
+    </div>
+    <div class="album-card__description">
+        <a class="album-card__edit-link" ng-click="albumCard.edit()" ng-if="user.id === currentUser.id">
+            <svg class="album-card__btn-edit">
+                <use xlink:href="img/sprite.svg#edit"></use>
+            </svg>
+        </a>
+        <div class="album-card__title" ng-bind="album.name"></div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.block_popup-photo-edit {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  width: 680px;
+
+  border-radius: 5px;
+
+  justify-content: space-between;
+}
+
+.block__photo-edit {
+  background: #fff;
+  padding-bottom: 40px;
+
+  padding-left: 58px;
+
+  @include breakpoint($screen3) {
+    padding-left: 8px;
+
+  }
+  @include breakpoint($screen4) {
+    padding-left: 8px;
+
+  }
+}

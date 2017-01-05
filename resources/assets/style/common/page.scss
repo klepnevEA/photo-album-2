@@ -1,0 +1,207 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+.page__header {
+  flex: 0 0 auto;
+}
+
+.container {
+  width: 1580px;
+  margin: 0 auto;
+
+  @include breakpoint($screen1) {
+    width: 1180px;
+  }
+  @include breakpoint($screen2) {
+    width: 720px;
+  }
+  @include breakpoint($screen3) {
+    width: 320px;
+  }
+  @include breakpoint($screen4) {
+    width: 300px;
+  }
+
+  &__photo-title {
+    font-family: $font1;
+    font-weight: 600;
+    font-size: 21px;
+    margin: 50px 0 36px;
+
+    @include breakpoint($screen3) {
+      text-align: center;
+    }
+  }
+}
+
+.page__main {
+  flex: 1 1 100%;
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  @include breakpoint($screen3) {
+    justify-content: center;
+  }
+  @include breakpoint($screen4) {
+    justify-content: center;
+  }
+}
+
+.grid_var1 {
+  margin-bottom: 30px;
+
+  .grid__item {
+    width: 380px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    @include breakpoint($screen1) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(4n) {
+        margin-right: 20px;
+      }
+
+    }
+    @include breakpoint($screen2) {
+      width: 348px;
+
+      margin-right: 24px;
+
+      &:nth-child(4n) {
+        margin-right: 24px;
+      }
+      &:nth-child(3n) {
+        margin-right: 24px;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @include breakpoint($screen3) {
+      width: 300px;
+      margin-right: 10px;
+      margin-left: 10px;
+      &:nth-child(4n) {
+        margin-right: 10px;
+      }
+      &:nth-child(3n) {
+        margin-right: 10px;
+      }
+      &:nth-child(2n) {
+        margin-right: 10px;
+      }
+    }
+    @include breakpoint($screen4) {
+      width: 300px;
+      margin-right: 10px;
+      margin-left: 10px;
+
+      &:nth-child(4n) {
+        margin-right: 10px;
+      }
+      &:nth-child(3n) {
+        margin-right: 10px;
+      }
+      &:nth-child(2n) {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.grid_var2 {
+  .grid__item {
+    width: 300px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    @include breakpoint($screen1) {
+      width: 280px;
+
+      &:nth-child(5n) {
+        margin-right: 20px;
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+    @include breakpoint($screen2) {
+      width: 224px;
+
+      margin-right: 24px;
+      &:nth-child(5n) {
+        margin-right: 24px;
+      }
+      &:nth-child(4n) {
+        margin-right: 24px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+    }
+    @include breakpoint($screen3) {
+      width: 300px;
+      margin-right: 10px;
+      margin-left: 10px;
+
+      &:nth-child(5n) {
+        margin-right: 10px;
+      }
+      &:nth-child(4n) {
+        margin-right: 10px;
+      }
+
+      &:nth-child(3n) {
+        margin-right: 10px;
+      }
+      &:nth-child(2n) {
+        margin-right: 10px;
+      }
+
+    }
+    @include breakpoint($screen4) {
+      width: 300px;
+      margin-right: 10px;
+      margin-left: 10px;
+
+      &:nth-child(5n) {
+        margin-right: 10px;
+      }
+      &:nth-child(4n) {
+        margin-right: 10px;
+      }
+      &:nth-child(3n) {
+        margin-right: 10px;
+      }
+      &:nth-child(2n) {
+        margin-right: 10px;
+      }
+    }
+
+
+  }
+}
+
+.page__footer {
+  flex: 0 0 auto;
+}
+

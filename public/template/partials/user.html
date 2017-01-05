@@ -1,0 +1,20 @@
+<div class="page__user">
+    <div class="page__user-wrapper">
+        <div class="album-list__button">
+            <button class="button button__add" ng-click="userState.albumAdd()" ng-if="currentUser.id == user.id">
+                <svg class="button__add-svg">
+                    <use xlink:href="img/sprite.svg#add"></use>
+                </svg>
+                <div class="button__add-text">Добавить</div>
+            </button>
+        </div>
+        <div class="container">
+            <div class="container__album-title_user">Альбомы</div>
+            <div class="grid grid_var2">
+                <div class="grid__item" ng-repeat="album in albums">
+                    <album-card album-id="{{album.id}}"></album-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+.button__search {
+  &-label {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    width: 380px;
+    height: 40px;
+
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background: #ffffff;
+
+    @include breakpoint ($screen2) {
+      width: 280px;
+    }
+    @include breakpoint ($screen3) {
+      width: 300px;
+    }
+    &:hover {
+      border-color: #20b6ed;
+    }
+    &:hover .button__search-svg {
+      fill: #20b6ed;
+    }
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 40px;
+      height: 40px;
+
+      content: '';
+    }
+  }
+  &-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: fixed;
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+    border: none;
+    background: #ffffff;
+
+    justify-content: center;
+    align-items: center;
+
+  }
+  &-svg {
+    width: 20px;
+    height: 20px;
+
+    fill: #9f9e9e;
+  }
+  &-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    box-sizing: border-box;
+    width: 340px;
+    height: 40px;
+    padding: 15px;
+
+    border: none;
+    border-radius: 25px;
+    outline: none;
+
+    font-family: $font1;
+    font-size: 16px;
+    font-weight: 100;
+
+    @include breakpoint ($screen2) {
+      width: 240px;
+    }
+    @include breakpoint ($screen4) {
+      width:260px;
+    }
+    &:focus .header__search-label{
+        border-color: #20b6ed;
+    }
+    &:focus + .header__search-svg{
+        fill: #20b6ed;
+    }
+  }
+}
+.labelFocus {
+  border-color: #20b6ed;
+}
+.svgFocus {
+  fill: #20b6ed; 
+}

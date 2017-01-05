@@ -1,0 +1,33 @@
+.page__header_fixed {
+	flex: 0 0 auto;
+
+	width: 100%;
+
+	display: none;
+	z-index: 5;
+}
+.page__user {
+	padding: 60px 0;
+	@include breakpoint ($screen2) {
+		padding: 55px 0 60px; 
+	}
+	@include breakpoint ($screen3) {
+		padding: 35px 0 30px;
+	} 
+}
+
+.page__user-wrapper {
+	position: relative;
+}
+
+.container__album-title_user {
+	font-family: $font2;
+	font-weight: 300;
+	font-size: 42px;
+
+	margin-bottom: 40px;
+
+	@include breakpoint ($screen3) {
+		text-align:  center;
+	}
+}

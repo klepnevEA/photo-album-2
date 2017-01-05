@@ -1,0 +1,39 @@
+/*-----------------------------------------------------------------------------
+    loader
+-----------------------------------------------------------------------------*/
+.loader {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+
+  background-color: rgba(#03a9f4, .75);
+
+  &_page {
+    position: fixed;
+
+    display: block;
+
+    background-color: #03a9f4;
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+  }
+}
+/*-----------------------------------------------------------------------------
+    /loader
+-----------------------------------------------------------------------------*/

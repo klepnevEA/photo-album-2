@@ -1,0 +1,380 @@
+.block_album-card__wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 300px;
+
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.15);
+
+  @include breakpoint($screen1) {
+    width: 280px;
+  }
+  @include breakpoint($screen2) {
+    width: 224px;
+  }
+  @include breakpoint($screen3) {
+    width: 300px;
+  }
+  @include breakpoint($screen4) {
+    width: 300px;
+  }
+
+}
+
+.avatar-img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+.album-card-link__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  text-align: center;
+
+  color: #fff;
+  background: linear-gradient(to top, rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .0) 100%);
+
+}
+
+.album-card-link__hover a {
+  display: block;
+
+  transition: all 1s ease-in-out;
+  text-decoration: none;
+
+  color: #fff;
+}
+
+.album-card__link {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  p {
+    margin: 0;
+
+    font-family: $font1;
+    font-weight: 300;
+    &:last-child {
+      font-weight: bold;
+      line-height: 2;
+    }
+  }
+}
+
+.album-card__img {
+  overflow: hidden;
+
+  width: 300px;
+  height: 300px;
+
+  @include breakpoint($screen1) {
+    width: 280px;
+    height: 280px;
+  }
+  @include breakpoint($screen2) {
+    width: 224px;
+    height: 224px;
+  }
+  @include breakpoint($screen3) {
+    width: 300px;
+    height: 300px;
+  }
+  @include breakpoint($screen4) {
+    width: 300px;
+    height: 300px;
+  }
+
+}
+
+.album-card__img:hover .album-card-link__hover {
+  display: block;
+
+  width: 100%;
+  height: 300px;
+
+  cursor: pointer;
+  text-align: left;
+
+  @include breakpoint($screen1) {
+    width: 280px;
+    height: 280px;
+  }
+  @include breakpoint($screen2) {
+    width: 224px;
+    height: 224px;
+  }
+  @include breakpoint($screen3) {
+    width: 300px;
+    height: 300px;
+  }
+  @include breakpoint($screen3) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.photo-card__img-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.album-card__description {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+
+  background-color: #fff;
+
+  align-items: center;
+  min-height: 54px;
+  @extend %clearfix;
+}
+
+.album-card__edit-link {
+
+}
+
+.album-card__btn-edit {
+  width: 20px;
+  height: 20px;
+  padding: 15px 20px;
+
+  fill: rgba(#000, .2);
+  &:hover {
+    fill: rgba(#000, .6);
+
+  }
+}
+
+.album-card__title {
+  width: 100%;
+  padding: 10px 20px;
+
+  text-align: right;
+
+  color: rgba(#323232, .8);
+
+  font-weight: 600;
+
+}
+
+.block_photo-card__wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 380px;
+
+  color: rgba(#323232, .8);
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.15);
+
+  @include breakpoint($screen2) {
+    width: 348px;
+  }
+  @include breakpoint($screen3) {
+    width: 300px;
+  }
+  @include breakpoint($screen4) {
+    width: 300px;
+  }
+}
+
+.photo-card__img {
+  position: relative;
+
+  overflow: hidden;
+
+  height: 250px;
+
+  @include breakpoint($screen2) {
+    height: 230px;
+  }
+  &:hover .album-card-link__hover {
+    display: block;
+
+    width: 100%;
+    height: 250px;
+
+    cursor: pointer;
+    text-align: left;
+  }
+}
+
+.photo-card__img-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.photo-card__loupe {
+  position: absolute;
+  top: 50%;
+
+  width: 100%;
+  height: 40px;
+
+  transform: translateY(-50%);
+
+  fill: #fff;
+}
+
+.photo-card__description {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: flex-start;
+  @extend %clearfix;
+
+}
+
+.photo-card-avatar__wrapper {
+  padding: 20px;
+
+  order: 0;
+  flex: 0 1 auto;
+  align-self: center;
+  @extend %clearfix;
+
+  &:hover .album-card_avatar-hover {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    text-align: left;
+  }
+}
+
+.photo-card__avatar {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+}
+
+.photo-card__more {
+  width: 17px;
+
+  fill: #fff;
+}
+
+.album-card__more-wrapper {
+  position: absolute;
+  top: 50%;
+
+  width: 100%;
+
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.photo-card__more {
+  width: 17px;
+
+  fill: #fff;
+}
+
+.album-card_avatar-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .0) 100%);
+}
+
+.photo-card__icon {
+  width: 20px;
+  height: 17px;
+  padding-right: 11px;
+
+  fill: #d6d6d6;
+  flex-shrink: 0;
+  &_1 {
+    fill: #fff;
+  }
+}
+
+.photo-card-title__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  padding: 20px;
+
+  justify-content: center;
+  align-self: center;
+}
+
+.photo-card__title {
+  font-family: $font1;
+  font-weight: 300;
+}
+
+.photo-card__comments {
+  padding-top: 20px;
+
+}
+
+.photo-card-2__comments {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+
+  color: rgba(#fff, .8);
+}
+
+.photo-card__stats {
+  display: inline-block;
+
+  padding-right: 24px;
+}
+
+.photo-card__dir {
+  display: flex;
+
+  padding: 0 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  color: inherit;
+  background-color: #f6f6f6;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.photo-card-dir__title {
+  padding: 10px;
+
+  font-weight: 600;
+}

@@ -1,0 +1,17 @@
+<div class="album-list">
+    <div class="album-list__button button_position-top" ng-show="user.id === currentUser.id">
+        <button class="button button__add" ng-click="albumState.photoAddPopup()">
+            <svg class="button__add-svg">
+                <use xlink:href="img/sprite.svg#add"></use>
+            </svg>
+            <div class="button__add-text">Добавить</div>
+        </button>
+    </div>
+    <div class="container container_padding-top">
+        <div class="grid grid_var1">
+            <div class="grid__item" ng-repeat="photo in photos">
+                <photo-card-2></photo-card-2>
+            </div>
+        </div>
+    </div>
+</div>

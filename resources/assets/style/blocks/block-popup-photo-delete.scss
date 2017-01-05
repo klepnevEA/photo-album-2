@@ -1,0 +1,58 @@
+.block_popup-photo-delete {
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+
+  width: 680px;
+
+  border-radius: 5px;
+
+  justify-content: space-between;
+  @include breakpoint($screen3) {
+    width: 300px;
+  }
+  @include breakpoint($screen4) {
+    width: 300px;
+  }
+}
+
+.photo-delete__title {
+  padding-top: 40px;
+
+  font-family: $font1;
+  font-weight: 500;
+}
+
+.block__photo-delete {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background:#fff;
+  font-family: $font2;
+  font-weight:bold;
+}
+
+.photo-delete__menu {
+  padding: 35px;
+}
+
+.link__yes {
+  padding: 10px 20px;
+
+  text-decoration: none;
+
+  color: #fff;
+  border-radius: 25px;
+
+  background: #ee4634;
+}
+
+.link__cansel {
+  padding-left: 20px;
+
+  text-decoration: none;
+
+  color: #6d6d6d;
+}

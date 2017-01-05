@@ -1,0 +1,46 @@
+<div class="block_photo-card__wrapper">
+    <div class="photo-card__img" ng-click="photoCard.showPhotoPopup()">
+        <img ng-src="{{photo.thumbnail_url}}" class="photo-card__img-image">
+        <div class="album-card-link__hover">
+            <svg class="photo-card__loupe">
+                <use xlink:href="img/sprite.svg#loupe"></use>
+            </svg>
+        </div>
+    </div>
+    <div class="photo-card__description">
+        <div class="photo-card-avatar__wrapper" ui-sref="user({id: photo.user.id})">
+            <div class="photo-card__avatar">
+                <img ng-src="{{photo.user.avatar_url || 'img/no-avatar.jpg'}}" alt="{user.name}" class="avatar-img">
+                <div class="album-card_avatar-hover">
+                    <div class="album-card__more-wrapper">
+                        <svg class="photo-card__more">
+                            <use xlink:href="img/sprite.svg#more"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="photo-card-title__wrapper">
+            <div class="photo-card__title" ng-bind="photo.name || 'Фото без имени'"></div>
+            <div class="photo-card__comments">
+                <svg class="photo-card__icon">
+                    <use xlink:href="img/sprite.svg#comments"></use>
+                </svg>
+                <div class="photo-card__stats" ng-bind="photo.commentsCount"></div>
+                <svg class="photo-card__icon">
+                    <use xlink:href="img/sprite.svg#like"></use>
+                </svg>
+                <div class="photo-card__stats" ng-bind="photo.likesCount"></div>
+            </div>
+        </div>
+    </div>
+
+    <a class="photo-card__dir" ui-sref="album({id: photo.album.id})">
+        <svg class="photo-card__icon">
+            <use xlink:href="img/sprite.svg#album"></use>
+        </svg>
+        <div class="photo-card-dir__title" ng-bind="photo.album.name"></div>
+    </a>
+</div>
+

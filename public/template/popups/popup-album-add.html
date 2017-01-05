@@ -1,0 +1,38 @@
+<div class="block_popup-album white-popup">
+    <div class="block__popup-header">
+        <div class="add-album__text">Добавить альбом</div>
+        <button class="add-album__close" ng-click="popupAlbumAdd.cancel()">
+            <svg class="add-album__icon-close">
+                <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="block__album-desc">
+        <form action="" class="popup-album-description">
+            <label for="title" class="edit__label" data-text="Название">
+                <input type="text" name="title" class="title__input" id="title" placeholder="Мой альбом"
+                       ng-model="album.name">
+            </label>
+            <label for="desc" class="edit__label" data-text="Описание">
+                <textarea name="desc" class="desc__input" id="desc" rows="5"
+                          placeholder="Как я провёл лето. Чтобы было красиво описание должно быть на несколько строк. Убедитесь сами!"
+                          ng-model="album.description"></textarea>
+            </label>
+            <div class="album-desc__load">
+                <div class="photo-card-fon__wrapper">
+                    <div class="photo-card__fon" ngf-background="album.image"></div>
+                </div>
+                <div class="warning__wrapper">
+                    <button class="button__load" ngf-select ng-model="album.image">Загрузить обложку</button>
+                    <span class="load__warning">(файл должен быть размером не более <b>2500 КБ</b>)</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="block__popup-save">
+        <div class="popup-save__wrapper">
+            <button class="popup-save__button-save" ng-click="popupAlbumAdd.create()">Сохранить</button>
+            <button class="button__cansel" ng-click="popupAlbumAdd.cancel()">Отменить</button>
+        </div>
+    </div>
+</div>

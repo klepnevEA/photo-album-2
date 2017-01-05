@@ -1,0 +1,23 @@
+<div class="block_auth" id="block_enter">
+    <label for="input_email" class="label hover_email">
+        <input type="text" name="email" class="input" id="input_email" placeholder="Электронная почта"
+               ng-model="formData.email">
+        <svg class="envelope_svg">
+            <use xlink:href="img/sprite.svg#envelope"></use>
+        </svg>
+    </label>
+    <label for="input_email" class="label hover_password">
+        <input type="password" name="password" class="input" id="input_password" placeholder="Пароль"
+               ng-model="formData.password">
+        <svg class="password_svg">
+            <use xlink:href="img/sprite.svg#password"></use>
+        </svg>
+    </label>
+    <div class="error_login" ng-repeat="error in errors" ng-bind="error"></div>
+    <a href="" class="text_forget">Забыли пароль?</a>
+    <button class="button_enter" ng-click="userController.auth()">Войти</button>
+    <span class="text_registration">Нет аккаунта?
+        <a class="link_registration"
+           ui-sref="registration">Зарегестрироваться</a>
+    </span>
+</div>
